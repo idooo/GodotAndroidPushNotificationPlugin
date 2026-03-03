@@ -27,8 +27,7 @@ class AndroidExportPlugin extends EditorExportPlugin:
 
 	func _get_android_dependencies(platform, debug):
 		return PackedStringArray([
-			"com.google.firebase:firebase-bom:33.7.0",
-			"com.google.firebase:firebase-messaging",
+			"com.google.firebase:firebase-messaging:24.1.0",
 		])
 
 	func _get_name():
