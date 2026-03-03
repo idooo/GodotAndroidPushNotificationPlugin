@@ -9,7 +9,7 @@ func _ready():
 		_plugin.WillSendDeviceToken.connect(_on_token_received)
 		_plugin.RegistrationError.connect(_on_registration_error)
 	else:
-		printerr("Couldn't find plugin " + _plugin_name)
+		print("Couldn't find plugin " + _plugin_name)
 
 func _on_register_pressed():
 	if _plugin:
@@ -20,5 +20,5 @@ func _on_token_received(token: String):
 	$Label.text = "Token: " + token
 
 func _on_registration_error(error: String):
-	printerr("Registration failed: " + error)
+	print("Registration failed: " + error)
 	$Label.text = "Error: " + error
